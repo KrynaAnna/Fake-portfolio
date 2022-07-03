@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Anna Kryna</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');</style>
+
+</head>
+<body>
+    <div id="top">
+        <img id="logo" src="images/logo.png" alt="logo">
+        <nav class="toolbar">
+            <table>
+                <tr>
+                    <th class="nav"><a class="nav" href="#second-block">About</a></th>
+                    <th class="nav"><a class="nav" href="#third-block">Projects</a></th>
+                    <th class="nav"><a class="nav" href="#line">Travel</a></th>
+                    <th class="nav"><a class="nav" href="#contact-block">Contact</a></th>
+                </tr>
+            </table>
+        </nav>
+        <section class="on-off">
+            <table>
+                <tr>
+                    <th class="but-text">Dark</th>
+                    <th><label class="switch"><input type="checkbox"><span class="slider round"></span></label></th>
+                    <th class="but-text" style="padding-right: 50px;">Light</th>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <div id="first-block">
+        <section class="text">
+            <h1>Hi,</h1>
+            <h1 class="gradient-text">I'm <b>Anna,</b></h1>
+            <h1>web developer</h1>
+            <h3 class="gray-text">Python developer with a passion for quality coding and problem solving</h3>
+            <a href="tel: +48794340882"><button class="slide">Contact me!</button></a>
+        </section>
+        <img id="img_01" src="images/img_01.png" alt="picture">
+    </div>
+    <div id="second-block">
+        <section class="text">
+            <h1><b>Me, Myself and I</b></h1>
+            <h3>Self-starter, independent, and responsible. Inquisitive and resourceful – able
+                to quickly research and systemize information, the solution for complex technical and logistical
+                challenges. Fast learner, able to willing to work hard to excel in my job. Build GUIs and Desktop
+                applications with Python. Conducted user training, maintain user manuals and software documentation.</h3>
+            <h1 id="gray-text"><b>Blog</b></h1>
+        </section>
+        <img id="img_02" src="images/img_02.png" alt="picture">
+    </div>
+    <div id="third-block">
+        <section class="block"><img class="mini-pic" src="images/img_03.jpg" alt="img_03" onClick="view('images/img_03.jpg')"><h3>Project #1</h3></section>
+        <section class="block"><img class="mini-pic" src="images/img_04.jpg" alt="img_04" onClick="view('images/img_04.jpg')"><h3>Project #2</h3></section>
+        <section class="block"><img class="mini-pic" src="images/img_05.jpg" alt="img_05" onClick="view('images/img_05.jpg')"><h3>Project #3</h3></section>
+        <section class="block"><img class="mini-pic" src="images/img_06.jpg" alt="img_06" onClick="view('images/img_06.jpg')"><h3>Project #4</h3></section>
+    </div>
+    <div id="line">
+        <section class="strip"></section>
+        <img id="plane" src="images/plane.png" alt="plane">
+        <img id="arrow" src="images/arrow.png" alt="arrow">
+        <img id="cloud" src="images/cloud.png" alt="cloud">
+        <img id="cloud2" src="images/cloud.png" alt="cloud2">
+
+        <div class="travel-block">
+            <img class="pic" src="images/pic_01.jpg" alt="travel_01">
+            <section class="text2">
+                <h3>Travel is the movement of people between distant geographical locations.
+                    Travel can be done by foot, bicycle, automobile, train, boat, bus, airplane, ship or other
+                    means, with or without luggage, and can be one way or round trip.</h3>
+                <h3>Travel can also include relatively short stays between successive movements,
+                    as in the case of tourism. Travel is not rational, but it’s in our genes. Here’s why you should
+                    start planning a trip now.</h3>
+            </section>
+                <img class="pic" src="images/pic_02.jpg" alt="travel_02">
+        </div>
+    </div>
+    <div id="contact-block">
+        <a href="https://goo.gl/maps/o9MAvKL7hxi3h9FZ7" target="_blank">
+            <img id="map" src="images/map.png" alt="map"></a>
+        <section class="info">
+            <section>
+                <h1><b>Contact me</b></h1>
+                <h3>Self-starter, independent, and responsible. Inquisitive and resourceful – able
+                    to quickly research and systemize information.</h3>
+                </section>
+            <section class="contact-form">
+                    <section id="k"><input class="input" placeholder="Name" type="text" id="name">
+                        <input class="input" placeholder="Email" type="email" id="email"></section>
+                    <input class="subject" placeholder="Subject" type="text" id="subject">
+                    <textarea class="message" placeholder="Message" id="message"></textarea>
+                    <button class="send" onclick="sendEmail()">Send message!</button>
+
+                    <script src="https://smtpjs.com/v3/smtp.js"></script>
+                    <script type="text/javascript">
+                        function sendEmail() {
+                            var name = document.getElementById("name").value;
+                            var email = document.getElementById("email").value;
+                            var subject = document.getElementById("subject").value + '-' + name;
+                            var message = document.getElementById("message").value;
+                            Email.send({
+                                SecureToken: '9797f2e3-9622-4189-9af3-2aa167cad1dd',
+                                To: email,
+                                From: "krynaann13@gmail.com",
+                                Subject: subject,
+                                Body: message,
+                            }).then(
+                                message => alert("Mail sent successfully")
+                            );
+                        }
+                    </script>
+            </section>
+        </section>
+    </div>
+    <div id="bottom-block">
+        <h1>Follow me</h1>
+        <div class="footer">
+            <a href="https://github.com/KrynaAnna" target="_blank"><svg class="ico" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+            <a href="https://t.me/AnnaK1311" target="_blank"><svg class="ico" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <path d="M22.05 1.577c-.393-.016-.784.08-1.117.235-.484.186-4.92 1.902-9.41 3.64-2.26.873-4.518 1.746-6.256 2.415-1.737.67-3.045 1.168-3.114 1.192-.46.16-1.082.362-1.61.984-.133.155-.267.354-.335.628s-.038.622.095.895c.265.547.714.773 1.244.976 1.76.564 3.58 1.102 5.087 1.608.556 1.96 1.09 3.927 1.618 5.89.174.394.553.54.944.544l-.002.02s.307.03.606-.042c.3-.07.677-.244 1.02-.565.377-.354 1.4-1.36 1.98-1.928l4.37 3.226.035.02s.484.34 1.192.388c.354.024.82-.044 1.22-.337.403-.294.67-.767.795-1.307.374-1.63 2.853-13.427 3.276-15.38l-.012.046c.296-1.1.187-2.108-.496-2.705-.342-.297-.736-.427-1.13-.444zm-.118 1.874c.027.025.025.025.002.027-.007-.002.08.118-.09.755l-.007.024-.005.022c-.432 1.997-2.936 13.9-3.27 15.356-.046.196-.065.182-.054.17-.1-.015-.285-.094-.3-.1l-7.48-5.525c2.562-2.467 5.182-4.7 7.827-7.08.468-.235.39-.96-.17-.972-.594.14-1.095.567-1.64.84-3.132 1.858-6.332 3.492-9.43 5.406-1.59-.553-3.177-1.012-4.643-1.467 1.272-.51 2.283-.886 3.278-1.27 1.738-.67 3.996-1.54 6.256-2.415 4.522-1.748 9.07-3.51 9.465-3.662l.032-.013.03-.013c.11-.05.173-.055.202-.057 0 0-.01-.033-.002-.026zM10.02 16.016l1.234.912c-.532.52-1.035 1.01-1.398 1.36z" color="#000" /></svg></a>
+            <a href="https://www.linkedin.com/in/%D0%B0nna-%D0%BAryna-b21b79231/" target="_blank"><svg class="ico" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg></a>
+        </div>
+        <h3>©2022 Anna Kryna</h3>
+    </div>
+    <script>
+        var swt = document.getElementsByClassName('slider round')[0];
+
+        swt.onclick = function() {
+            var bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color');
+
+            if (bgColor === 'rgb(11, 19, 43)') {
+                document.body.style.backgroundColor = "#5A658E";
+            }
+            else {
+                document.body.style.backgroundColor = "rgb(11, 19, 43)";
+            }
+        };
+
+    </script>
+    <script type="text/javascript">
+        function view(imgsrc) {
+            viewwin = window.open(imgsrc,'viewwin', 'width=600,height=300');
+        }
+    </script>
+</body>
+</html>
