@@ -1,4 +1,4 @@
-### <a href="https://krynaanna.github.io/Portfolio/">Use Site</a>
+### <a href="https://krynaanna.github.io/Fake-portfolio/">Use Site</a>
 
 # Description
 This website is fake portfolio, which was created for demonstrate my skills in web development.
